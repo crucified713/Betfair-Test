@@ -1,0 +1,226 @@
+.header {
+  position: relative;
+  padding: 2em 0 1.5em;
+
+  &__logo {
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    padding-top: 11px;
+    background-color: $dark-grey;
+  }
+
+  &__project-name {
+    margin-bottom: 0;
+  }
+}
+
+.content-container {
+  margin: 0 auto;
+  width: 500px;
+  padding: 3em 0;
+  @include mobile() {
+    width: 100%!important;
+  }
+  &--lg {
+    width: 940px;
+    @include sm-screen() {
+      width: 720px;
+    }
+  }
+}
+
+.section {
+  padding: 2em 0;
+  &:first-of-type {
+    padding-top: 3em;
+  }
+  &:last-of-type {
+    padding-bottom: 5em;
+  }
+}
+
+.intro {
+  padding-bottom: 0;
+  &__heading {
+    margin-bottom: 20px;
+  }
+  &__excerpt {
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+
+  }
+  &__content{
+    font-size: calc-em(18);
+    letter-spacing: 1px;
+    margin-bottom: 2em;
+  } 
+}
+
+.blurb {
+  &__text {
+    line-height: 1.8;
+  }
+}
+
+.breakout {
+  background-color: $white;
+  padding: 5em 0 0;
+  @include mobile() {
+    padding-top: 3em;
+  }
+  &__caption {
+    text-align: left;
+    width: 400px;
+    margin-left: auto;
+    @include tablet() {
+      width: 100%;
+      padding-left: 2em;
+    }
+    @include mobile() {
+      padding: 0 1.5rem;
+      margin-bottom: 3em;
+    }
+    &__heading {
+      color: $black;
+      padding-bottom: 1em;
+      &:after {
+        content: " ";
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 1px;
+        top: 20px;
+        background-color: $light-grey;
+      }
+    }
+  }
+  &__figure {
+    padding-right: 3em;
+    @include tablet() {
+      padding-right: 0;
+    }
+  }
+}
+
+.figcaption {
+  text-align: right;
+  padding-top: 1em;
+  border-top: 1px solid $white;
+  margin-top: 5px;
+  margin-bottom: 2em;
+  &__title {
+    margin-bottom: .5em;
+  }
+  &__text {
+    font-size: .75em;
+  }
+}
+
+.project { 
+  &__img {
+    margin-bottom: 1em;
+  }
+  &__title {
+    font-size: .875em;
+    margin-bottom: .5em;
+  }
+  &__name {
+    font-size: .75em;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding-bottom: 3em;
+  &__hr {
+    width: 120px;
+    margin: 0 auto 3em;
+  }
+  &__text {
+    font-size: .75em;
+    color: $dark-grey;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+}
+
+.modal {
+  
+  text-align: center;
+  background-color: $white;
+  padding: 5em;
+  @include mobile() {
+    padding: 1em 0;
+  }
+  &__wrap {
+    width: 800px;
+    margin: 0 auto;
+    @include sm-screen() {
+      width: 600px;
+    }
+    @include tablet() {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  &__heading {
+    color: $black;
+  }
+  &__text {
+    line-height: 1.9;
+  }
+}
+/** Override flexslider default styles */
+.flexslider {
+  background: $dark-grey;
+  border: none;
+  border-radius: unset;
+  margin-bottom: 0;
+  .flex-direction-nav a:before {
+    font-size: 35px;
+    color: $white;
+    text-shadow: none;
+  }
+  .flex-direction-nav .flex-prev,
+  &:hover .flex-direction-nav .flex-prev {
+    left: 30px;
+  }
+  .flex-direction-nav .flex-next,
+  &:hover .flex-direction-nav .flex-next {
+    right: 30px;
+  }
+  .flex-direction-nav .flex-prev,
+  .flex-direction-nav .flex-next {
+    opacity: .3;
+    @include tablet() {
+      display: none;
+    }
+  }
+
+  .flex-control-nav {
+    z-index: 2;
+    bottom: 20px;
+    @include mobile() {
+      bottom: 0;
+    }
+  }
+  .flex-control-paging li a {
+    background: #424242;
+  }
+  .flex-control-paging li a.flex-active {
+    background: $white;
+  }
+}
+
+/** Override Fancybox */
+.fancybox-slide--html .fancybox-close-small {
+  border: 2px solid $black;
+  color: black;
+  top: 15px;
+  right: 15px;
+}

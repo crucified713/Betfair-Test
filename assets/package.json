@@ -1,0 +1,13 @@
+{
+  "name": "website",
+  "version": "0.1.0",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "*",
+    "gulp-if": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "run-sequence": "*"
+  }
+}

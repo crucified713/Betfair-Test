@@ -1,0 +1,33 @@
+@mixin transition($duration: .25s, $delay: 0s) {
+    -o-transition: all $duration ease $delay;
+    -moz-transition: all $duration ease $delay;
+    -ms-transition: all $duration ease $delay;
+    -webkit-transition: all $duration ease $delay;
+    transition: all $duration ease $delay;
+}
+
+@mixin transition-on($element, $duration, $delay) {
+    -o-transition: $element $duration ease $delay;
+    -moz-transition: $element $duration ease $delay;
+    -ms-transition: $element $duration ease $delay;
+    -webkit-transition: $element $duration ease $delay;
+    transition: $element $duration ease $delay;
+}
+
+@mixin mobile() {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media screen and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin sm-screen() {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}
