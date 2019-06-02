@@ -23,4 +23,3 @@ A simple wireframe is attached for you to implement in the stack of your choosin
 
 6. Modal will be displayed when you click on "VISIT SITE" button. 
 
-## Test Cases
